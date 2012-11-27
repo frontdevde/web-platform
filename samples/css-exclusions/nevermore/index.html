@@ -19,7 +19,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
             var gui = new dat.GUI();
             var obj = {
                 scale: 1,
-                fontSize: 6,
+                fontSize: 15,
                 shapeEnabled: true
             };
             gui.add(obj, "scale").min(0.5).max(4).step(0.1).onChange(
@@ -47,11 +47,32 @@ Unless required by applicable law or agreed to in writing, software distributed 
         }
     </script>
     <style>
+        body{
+            background: -webkit-radial-gradient(center, ellipse cover, #a90329 0%,#8f0222 44%,#6d0019 100%);
+            background-size:cover;
+        }
+        body:after{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            width: 180px;
+            height: 100px;
+            background: url(../images/decode.jpg);
+            opacity: .8;
+            border-radius: 5px;
+        }
         #crow {
-            font-family: 'IM Fell Double Pica', serif;
-            font-size: 6px;
-            width: 400px;
-            height: 495px;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            margin-left: -250px;
+            color: white;
+            font-family: 'Helvetica Neue', Helvetica, serif;
+            font-size: 15px;
+            width: 500px;
+            height: 595px;
             overflow: hidden;
             word-wrap: break-word;
             background-size: 100%;
@@ -66,14 +87,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
     </style>
 </head>
 <body>
-    <article>
-        <h1>CSS Exclusions: The Raven</h1>
-        <h2>By Edgar Allan Poe</h2>
-        <section></section>
-        <section>
-            <p>Use the interface in the upper right to adjust the size of the outline and inner text, as well as toggling the shape inside on and off.</p>
-        </section>
-    </article>
     <!-- Artwork: http://openclipart.org/detail/12727/crow-by-anonymous-12727 -->
     <!-- Text: The Raven, Edgar Allan Poe -->
     <div id="crow" class="wrap">
@@ -203,7 +216,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
     And my soul from out that shadow that lies floating on the floor
     Shall be lifted - nevermore!
     </div>
-    <p>Unless otherwise noted, code and content is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
+    <!-- <p>Unless otherwise noted, code and content is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p> -->
     <script type="text/javascript" src="../resources/js/shape-test.js"></script>
 </body>
 </html>
